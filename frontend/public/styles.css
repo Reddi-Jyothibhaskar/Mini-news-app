@@ -1,0 +1,68 @@
+/* App */
+
+
+/* Home page */
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.article-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+  .article-card {
+    padding: 12px;
+  }
+}
+
+/* Aricle-view page */
+
+.article-view-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .article-view-page {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/*About page and Contact page */
+
+.contact-page,
+.about-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .contact-page,
+  .about-page {
+    padding: 1rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+
