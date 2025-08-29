@@ -4,6 +4,8 @@ import axios from 'axios';
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const API_BASE = "https://college-news-f6u9.onrender.com";
+
 function UploadNews() {
 
   const [formData, setFormData] = useState({
@@ -24,7 +26,7 @@ function UploadNews() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:5000/api/articles', formData);
+      await axios.post(`${API_BASE}/api/articles`, formData);
       toast.success('✅ Article uploaded successfully!');
       setFormData({ title: '', summary: '', content: '', author: '', imageUrl: '', publishedAt: new Date().toISOString() }); // Reset form after submission
     } catch (error) {
