@@ -3,7 +3,7 @@ import axios from 'axios';
 import ArticleCard from '../components/ArticleCard';
 import CategoryMenu from '../components/CategoryMenu';
 
-const API_BASE = "https://college-news-f6u9.onrender.com/";
+const API_BASE = "https://college-news-f6u9.onrender.com";
 
 function Home() {
   const [articles, setArticles] = useState([]);
