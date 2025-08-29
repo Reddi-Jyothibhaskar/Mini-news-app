@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+const API_BASE = "https://college-news-f6u9.onrender.com";
+
 function ArticleView() {
   const { id } = useParams();
   const [article, setArticle] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/articles/${id}`)
+    axios.get(`${API_BASE}/api/articles/${id}`)
       .then(res => setArticle(res.data))
       .catch(err => console.error(err));
   }, [id]);
