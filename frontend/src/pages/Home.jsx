@@ -3,13 +3,15 @@ import axios from 'axios';
 import ArticleCard from '../components/ArticleCard';
 import CategoryMenu from '../components/CategoryMenu';
 
+const API_BASE = "https://your-backend.onrender.com";
+
 function Home() {
   const [articles, setArticles] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     const fetchArticles = async () => {
-      const res = await axios.get('http://localhost:5000/api/articles', {
+      const res = await axios.get(`${API_BASE}/api/articles`, {
         params: { category: selectedCategory }
       });
       setArticles(res.data);
